@@ -12,6 +12,13 @@ public class Informe {
 		this.setor = setor;
 	}
 
+	
+	
+	public Informe() {
+	}
+
+
+
 	public String getHorarioAtendimento() {
 		return horarioAtendimento;
 	}
