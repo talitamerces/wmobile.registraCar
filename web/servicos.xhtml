@@ -17,16 +17,16 @@
 
 	<pm:page id="tipoSetor">
 
-		<pm:header title="Tira-dúvida" />
+		<pm:header title="Setores" />
 		<pm:content>
-			<h:form id="frmDuvida">
+			<h:form id="frmSetores">
 
-				<p:dataList id="dlDuvidas" 
-					value="#{duv.tiposDuvida}" var="tipo">
+				<p:dataList id="dlSetores" 
+					value="#{registra.tiposServico}" var="tipo">
 					<p:commandLink value="#{tipo}" 
 						action="resultado.ifba">
 						<f:setPropertyActionListener 
-							target="#{duv.duvidaEscolhida}"
+							target="#{registro.servicoEscolhido}"
 							value="#{tipo}">
 						</f:setPropertyActionListener>
 					</p:commandLink>
