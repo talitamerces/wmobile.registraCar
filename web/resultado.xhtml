@@ -15,10 +15,10 @@
 
 <h:body>
 
-	<pm:page id="resultado">
-
+	<pm:page id="#{registra.resultado.setor}">
+		<pm:header title="Tira-dúvida" />
 		<pm:content>
-			<h:form id="frmDuvida">
+			<h:form id="frmResultado">
 				<h:outputText id="resultadoCadeia" 
 					value="#{duv.resultado}" />
 				<p:commandButton value="Voltar" 
