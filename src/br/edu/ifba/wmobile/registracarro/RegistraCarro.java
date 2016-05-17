@@ -57,4 +57,9 @@ public class RegistraCarro {
 		resultado = setor.Exibir(tipo);
 	}
 	
+	public Informe getResultado(){
+		return resultado;
+	}
+	
+	
 }

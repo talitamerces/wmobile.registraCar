@@ -14,14 +14,18 @@
 
 <h:body>
 
-	<pm:page id="inicio">
+	<pm:page id="abertura">
 
-		<pm:header title="Resgistra-carro" />
+		<pm:header title="Tira-dúvidas" />
 		<pm:content>
-			<h:form id="frmDuvida">
-				<p:outputLabel value="Digite o seu e-mail:" />
-				<p:inputText value="#{registra.email}" />
-				<p:commandButton value="Acessar" action="servicos.ifba" />
+			<h:form id="frmEntrada">
+				<div align="center">
+									<p:graphicImage
+										value="/imgs/#{n}.jpg"
+										width="100" height="100" />
+																		
+								</div>
+				<p:commandButton value="Começar" action="inicio.ifba" />
 			</h:form>
 		</pm:content>
 
