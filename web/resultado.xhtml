@@ -15,12 +15,22 @@
 
 <h:body>
 
-	<pm:page id="#{registra.resultado.setor}">
-		<pm:header title="Tira-dúvida" />
+	<pm:page id="resultado">
+		<pm:header title="#{registra.getResultadoEscolhido().nome}" />
 		<pm:content>
 			<h:form id="frmResultado">
-				<h:outputText id="resultadoCadeia" 
-					value="#{duv.resultado}" />
+				<p:outputLabel value="Atendente:" style="font-weight:bold;"/>
+				<div align="center">
+					<p:outputLabel value="#{registra.getResultadoEscolhido().atendente}" />
+				</div>
+				<p:outputLabel value="Horário de Atendimento:" style="font-weight:bold;" />
+				<div align="center">
+					<p:outputLabel value="#{registra.getResultadoEscolhido().horarioAtendimento}" />
+				</div>	
+				<p:outputLabel value="Setor:" style="font-weight:bold;" />
+				<div align="center">
+					<p:outputLabel value="#{registra.getResultadoEscolhido().setor}" />
+				</div>
 				<p:commandButton value="Voltar" 
 					action="servicos.ifba" />
 			</h:form>

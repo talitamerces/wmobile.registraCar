@@ -2,8 +2,8 @@ package br.edu.ifba.wmobile.registracarro.cadeia;
 
 public class SetorVistoria extends Setor {
 
-	//instância das infromações para o atendimento do setor de vistoria
-	private Informe informacao = new Informe("08:00 às 17:00", "Adalberto Tinoco", "Sala 5A");
+	//instância das informações para o atendimento do setor de vistoria
+	private static Informe informacao = new Informe("VISTORIA","08:00 às 17:00", "Adalberto Tinoco", "Sala 5A");
 	
 	@Override
 	public Informe Exibir(TipoServico servico) {

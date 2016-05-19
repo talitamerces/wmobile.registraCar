@@ -2,22 +2,28 @@ package br.edu.ifba.wmobile.registracarro.cadeia;
 
 public class Informe {
 
+	private String nome = "";
 	private String horarioAtendimento = "";
 	private String atendente = "";
 	private String setor = "";
-	
-	public Informe(String horarioAtendimento, String atendente, String setor) {
+
+	public Informe(String nome, String horarioAtendimento, String atendente, String local) {
+		this.nome = nome;
 		this.horarioAtendimento = horarioAtendimento;
 		this.atendente = atendente;
-		this.setor = setor;
+		this.setor = local;
 	}
 
-	
-	
 	public Informe() {
 	}
 
+	public String getNome() {
+		return nome;
+	}
 
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public String getHorarioAtendimento() {
 		return horarioAtendimento;
@@ -45,10 +51,8 @@ public class Informe {
 
 	@Override
 	public String toString() {
-		return "Informe [horarioAtendimento=" + horarioAtendimento + ", atendente=" + atendente + ", setor=" + setor
-				+ "]";
+		return "Informe [nome=" + nome + ", horarioAtendimento=" + horarioAtendimento + ", atendente=" + atendente
+				+ ", setor=" + setor + "]";
 	}
-	
-	
-	
+
 }
