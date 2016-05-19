@@ -52,7 +52,7 @@ public class RegistraCarro {
 		setor.setProximoSetor(new SetorEmplacamento());
 		setor.setProximoSetor(new SetorSeguro());
 		
-		System.out.println("Agendado atendimento para" + email);
+		System.out.println("Agendado atendimento para " + email);
 		
 		resultado = setor.Exibir(tipo);
 	}
