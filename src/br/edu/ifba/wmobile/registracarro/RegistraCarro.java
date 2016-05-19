@@ -13,7 +13,6 @@ import br.edu.ifba.wmobile.registracarro.cadeia.SetorSeguro;
 import br.edu.ifba.wmobile.registracarro.cadeia.SetorVistoria;
 import br.edu.ifba.wmobile.registracarro.cadeia.TipoServico;
 
-
 @ManagedBean(name = "registra")
 @SessionScoped
 public class RegistraCarro {
@@ -29,7 +28,6 @@ public class RegistraCarro {
 		this.email = email;
 	}
 
-	
 	public List<String> getTiposServico() {
 		List<String> tipos = new ArrayList<String>();
 		tipos.add("Vistoria");
@@ -37,7 +35,7 @@ public class RegistraCarro {
 		tipos.add("Seguro Automotivo");
 		return tipos;
 	}
-	
+
 	public void setServicoEscolhido(String tipoServico) {
 		TipoServico tipo = TipoServico.SEM_SERVICO;
 		if (tipoServico.equals("Vistoria")) {
@@ -51,15 +49,14 @@ public class RegistraCarro {
 		Setor setor = new SetorVistoria();
 		setor.setProximoSetor(new SetorEmplacamento());
 		setor.setProximoSetor(new SetorSeguro());
-		
+
 		System.out.println("Agendado atendimento para " + email);
-		
+
 		resultado = setor.Exibir(tipo);
 	}
-	
-	public Informe getResultadoEscolhido(){
+
+	public Informe getResultadoEscolhido() {
 		return resultado;
 	}
-	
-	
+
 }

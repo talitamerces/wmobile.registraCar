@@ -9,8 +9,7 @@
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 
 <h:head>
-	<script name="jquery/jquery.js" 
-		library="primefaces"></script>
+	<script name="jquery/jquery.js" library="primefaces"></script>
 </h:head>
 
 <h:body>
@@ -21,17 +20,15 @@
 		<pm:content>
 			<h:form id="frmSetor">
 
-				<p:dataList id="dlServicos" 
-					value="#{registra.tiposServico}" var="tipo">
-					<p:commandLink value="#{tipo}" 
-						action="resultado.ifba">
-						<f:setPropertyActionListener 
-							target="#{registra.servicoEscolhido}"
+				<p:dataList id="dlServicos" value="#{registra.tiposServico}"
+					var="tipo">
+					<p:commandLink value="#{tipo}" action="resultado.ifba">
+						<f:setPropertyActionListener target="#{registra.servicoEscolhido}"
 							value="#{tipo}">
 						</f:setPropertyActionListener>
 					</p:commandLink>
 				</p:dataList>
-				
+
 			</h:form>
 
 		</pm:content>
